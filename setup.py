@@ -9,7 +9,7 @@ setup(
     description="Geo-related plugins for CKAN",
     long_description="""
     """,
-    classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+    classifiers=[],  # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     keywords='',
     author='Open Knowledge Foundation',
     author_email='info@okfn.org',
@@ -45,5 +45,14 @@ setup(
     [ckan.test_plugins]
     test_spatial_plugin = ckanext.spatial.tests.test_plugin.plugin:TestSpatialPlugin
 
+    [babel.extractors]
+    ckan = ckan.lib.extract:extract_ckan
     """,
+    message_extractors={
+        'ckanext': [
+            ('**.py', 'python', None),
+            ('**.js', 'javascript', None),
+            ('**/templates/**.html', 'ckan', None)
+        ]
+    }
 )
