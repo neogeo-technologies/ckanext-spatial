@@ -62,4 +62,4 @@ msgstr "Filtre géospatial"
 
 #: ckanext/spatial/templates/spatial/snippets/spatial_query.html:18
 msgid "Clear"
-msgstr "Vider"
+msgstr "Retirer"
